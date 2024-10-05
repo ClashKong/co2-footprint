@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CO2-Footprint Webseite</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        html[lang="ar"], html[lang="he"] {
+            direction: rtl;
+        }
+        html {
+            direction: ltr;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">CO2-Footprint</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CO2-Daten</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <h1 class="text-center">CO2-Emissionen weltweit</h1>
+
+        <div class="table-responsive mt-4">
+            <table id="co2Table" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Land</th>
+                        <th>Unternehmen</th>
+                        <th>CO2-Emissionen (Tonnen)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>Siemens</td>
+                        <td>100,000</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>ExxonMobil</td>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <td>China</td>
+                        <td>PetroChina</td>
+                        <td>500,000</td>
+                    </tr>
+                    <tr>
+                        <td>Indien</td>
+                        <td>Tata Steel</td>
+                        <td>200,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">© 2024 Non-Profit Organisation - Rechtliche Hinweise</span>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('#co2Table').DataTable();
+        });
+    </script>
+
+</body>
+</html>
